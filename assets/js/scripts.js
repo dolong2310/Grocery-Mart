@@ -179,6 +179,10 @@ function initJsToggle() {
   });
 }
 
+
+/**
+ * Hàm tính thêm modifier --active khi hover
+ */
 window.addEventListener("template-loaded", () => {
   const links = $$(".js-dropdown-list > li > a");
 
@@ -191,7 +195,25 @@ window.addEventListener("template-loaded", () => {
   });
 });
 
-// tab function
+/**
+ * Hàm switch tab
+ *
+ * Cách dùng:
+ * <ul class="...">
+ *    <li class="product-tab__item product-tab__item--active">
+ *      ...
+ *    </li>
+ *    <li class="product-tab__item">...</li>
+ * </ul>
+ * <div class="product-tab__contents">
+ *    <div class="product-tab__content product-tab__content--active">
+ *      ...
+ *    </div>
+ *    <div class="product-tab__content">
+ *      ...
+ *    </div>
+ * </div>
+ */
 window.addEventListener("template-loaded", () => {
   const tabsSelector = "product-tab__item";
   const contentsSelector = "product-tab__content";
@@ -218,7 +240,15 @@ window.addEventListener("template-loaded", () => {
   });
 });
 
-// Swith theme dark/light
+/**
+ * Swith theme dark/light
+ *
+ * Cách dùng:
+ * <button id="switch-theme-btn">
+ *    <img src="" alt="" class="switch-theme-icon" />
+ *    <span class="switch-theme-label">{label}</span>
+ * </button>
+ */
 window.addEventListener("template-loaded", () => {
   const switchBtn = document.querySelector("#switch-theme-btn");
   if (switchBtn) {
@@ -229,11 +259,15 @@ window.addEventListener("template-loaded", () => {
       document.querySelector("html").classList.toggle("dark", !isDark);
       localStorage.setItem("dark", !isDark);
       themeLabel.textContent = isDark ? "Dark mode" : "Light mode";
-      themeIcon.src = isDark ? "./assets/icons/sun.svg" : "./assets/icons/moon.svg";
+      themeIcon.src = isDark
+        ? "./assets/icons/sun.svg"
+        : "./assets/icons/moon.svg";
     };
     const isDark = localStorage.dark === "true";
     themeLabel.textContent = isDark ? "Light mode" : "Dark mode";
-    themeIcon.src = isDark ? "./assets/icons/moon.svg" : "./assets/icons/sun.svg";
+    themeIcon.src = isDark
+      ? "./assets/icons/moon.svg"
+      : "./assets/icons/sun.svg";
   }
 });
 
