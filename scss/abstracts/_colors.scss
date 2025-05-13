@@ -1,0 +1,36 @@
+$white: #fff;
+$black: #000;
+$light-gray: #f6f6f6;
+$light-gray-alt: #fafafd;
+$light-gray-dark: #eee;
+$light-gray-darker: #d2d1d6;
+$light-gray-darkest: #b9babe;
+$medium-gray: #9e9da8;
+$dark-gray: #6c6c72;
+$very-dark-gray: #292e39;
+$darkest-gray: #171c28;
+$dark-blue: #1a162e;
+$light-purple: #f8f8fb;
+$medium-purple: #ededf6;
+$dark-purple: #2f3441;
+
+$shadow-light: rgba(237, 237, 246, 0.2);
+$shadow-light-alt: rgba(200, 200, 200, 0.4);
+$shadow-medium: rgba(124, 124, 124, 0.2);
+$shadow-dark: rgba(23, 28, 40, 0.2);
+$shadow-dark-alt: rgba(0, 0, 0, 0.2);
+$shadow-darkest: rgba(0, 0, 0, 0.4);
+
+$border-light: rgb(41, 46, 57, 0.2);
+$border-dark: rgb(246, 246, 246, 0.2);
+
+// Icon filter colors
+$icon-light: brightness(0) saturate(100%) invert(9%) sepia(9%) saturate(4481%) hue-rotate(212deg) brightness(90%) contrast(96%);
+$icon-dark: brightness(0) saturate(100%) invert(100%) sepia(12%) saturate(5103%) hue-rotate(220deg) brightness(111%) contrast(108%);
+$dropdown-arrow-light: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(188deg) brightness(105%) contrast(104%);
+$dropdown-arrow-dark: brightness(0) saturate(100%) invert(15%) sepia(8%) saturate(1818%) hue-rotate(186deg) brightness(95%) contrast(83%);
+$action-arrow-light: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(317deg) brightness(105%) contrast(101%);
+$action-arrow-dark: brightness(0) saturate(100%) invert(16%) sepia(19%) saturate(670%) hue-rotate(185deg) brightness(98%) contrast(87%);
+$filter-arrow-light: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(174deg) brightness(107%) contrast(101%);
+$filter-arrow-dark: brightness(0) saturate(100%) invert(18%) sepia(29%) saturate(399%) hue-rotate(185deg) brightness(91%) contrast(92%);
+$menu-icon-dark: brightness(0) saturate(100%) invert(93%) sepia(1%) saturate(402%) hue-rotate(204deg) brightness(105%) contrast(99%);
