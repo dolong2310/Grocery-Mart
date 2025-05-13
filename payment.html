@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment | Grocery Mart</title>
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+
+    <!-- JS -->
+    <script src="./assets/js/scripts.js"></script>
+  </head>
+  <body>
+    <!-- Header section -->
+    <header id="header" class="header"></header>
+    <script>
+      load("#header", "./templates/header-logined.html");
+    </script>
+
+    <!-- Main section -->
+    <main class="checkout-page">
+      <div class="container">
+        <!-- Search Bar -->
+        <div class="checkout-container d-none d-md-block">
+          <div class="search-bar">
+            <input
+              type="text"
+              name=""
+              id=""
+              class="search-bar__input"
+              placeholder="Search for item"
+            />
+            <button class="search-bar__btn">
+              <img
+                src="./assets/icons/search.svg"
+                alt=""
+                class="icon search-bar__icon"
+              />
+            </button>
+          </div>
+        </div>
+
+        <!-- Breadcrumbs -->
+        <div class="checkout-container">
+          <ul class="breadcrumbs checkout-page__breadcrumbs">
+            <li class="breadcrumbs__item">
+              <a href="./" class="breadcrumbs__link">
+                Home
+                <img src="./assets/icons/arrow-right.svg" alt="" />
+              </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="./checkout.html" class="breadcrumbs__link">
+                Checkout
+                <img src="./assets/icons/arrow-right.svg" alt="" />
+              </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="./shipping.html" class="breadcrumbs__link">
+                Shipping
+                <img src="./assets/icons/arrow-right.svg" alt="" />
+              </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="#!" class="breadcrumbs__link">Payment method</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Payment info -->
+        <div class="checkout-container">
+          <div class="row gy-xl-3">
+            <div class="col-8 col-lg-12">
+              <div class="cart-info">
+                <div class="cart-info__header">
+                  <h2 class="cart-info__heading cart-info__heading--lv2">
+                    1. Shipping, arrives between Mon, May 16—Tue, May 24
+                  </h2>
+                  <a href="./shipping.html" class="cart-info__edit-btn">
+                    <img src="./assets/icons/edit.svg" alt="" class="icon" />
+                    Edit
+                  </a>
+                </div>
+                <div class="cart-info__separate"></div>
+
+                <!-- Payment item 1 -->
+                <article class="payment-item">
+                  <div class="paymen-item__info">
+                    <h3 class="payment-item__title">Imran Khan</h3>
+                    <p class="payment-item__desc">
+                      Museum of Rajas, Sylhet Sadar, Sylhet 3100.
+                    </p>
+                  </div>
+                </article>
+
+                <!-- Payment item 2 -->
+                <article class="payment-item">
+                  <div class="paymen-item__info">
+                    <h3 class="payment-item__title">Items details</h3>
+                    <p class="payment-item__desc">2 items</p>
+                  </div>
+                  <a href="./shipping.html" class="payment-item__link">
+                    View details
+                  </a>
+                </article>
+              </div>
+
+              <div class="cart-info">
+                <h2 class="cart-info__heading cart-info__heading--lv2">
+                  2. Shipping method
+                </h2>
+                <div class="cart-info__separate"></div>
+                <h3 class="cart-info__sub-heading">
+                  Availeble Shipping method
+                </h3>
+
+                <!-- Payment item 3 -->
+                <label>
+                  <article class="payment-item">
+                    <img
+                      src="./assets/img/payment/delivery-1.png"
+                      alt=""
+                      class="payment-item__thumb"
+                    />
+                    <div class="payment-item__content">
+                      <div class="payment-item__info">
+                        <h3 class="payment-item__title">Fedex Delivery</h3>
+                        <p class="payment-item__desc">
+                          Delivery: 2-3 days work
+                        </p>
+                      </div>
+
+                      <div class="card-info__checkbox payment-item__checkbox">
+                        <input
+                          type="radio"
+                          name="delivery-method"
+                          class="cart-info__checkbox-input payment-item__checkbox-input"
+                          checked
+                        />
+                        <span class="payment-item__cost">Free</span>
+                      </div>
+                    </div>
+                  </article>
+                </label>
+
+                <!-- Payment item 4 -->
+                <label>
+                  <article class="payment-item">
+                    <img
+                      src="./assets/img/payment/delivery-2.png"
+                      alt=""
+                      class="payment-item__thumb"
+                    />
+                    <div class="payment-item__content">
+                      <div class="payment-item__info">
+                        <h3 class="payment-item__title">DHL Delivery</h3>
+                        <p class="payment-item__desc">
+                          Delivery: 2-3 days work
+                        </p>
+                      </div>
+
+                      <div class="card-info__checkbox payment-item__checkbox">
+                        <input
+                          type="radio"
+                          name="delivery-method"
+                          class="cart-info__checkbox-input payment-item__checkbox-input"
+                          checked
+                        />
+                        <span class="payment-item__cost">%12.00</span>
+                      </div>
+                    </div>
+                  </article>
+                </label>
+              </div>
+            </div>
+            <div class="col-4 col-lg-12">
+              <div class="cart-info">
+                <h2 class="cart-info__heading cart-info__heading--lv2">
+                  Payment Details
+                </h2>
+                <p class="cart-info__desc">
+                  Complete your purchase item by providing your payment details
+                  order.
+                </p>
+
+                <form action="" class="form cart-info__form" autocomplete="off">
+                  <!-- Email input -->
+                  <div class="form__group">
+                    <label for="email" class="form__label form__label--medium">
+                      Email Address
+                    </label>
+                    <div class="form__text-input">
+                      <input
+                        required
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="example@gmail.com"
+                        class="form__input"
+                      />
+                      <img
+                        src="./assets/icons/warning.svg"
+                        alt=""
+                        class="form__input-icon-error"
+                      />
+                    </div>
+                    <p class="form__error">Email is not in correct format</p>
+                  </div>
+
+                  <!-- Card holder input -->
+                  <div class="form__group">
+                    <label
+                      for="card-holder"
+                      class="form__label form__label--medium"
+                    >
+                      Card Holder
+                    </label>
+                    <div class="form__text-input">
+                      <input
+                        required
+                        type="text"
+                        name="card-holder"
+                        id="card-holder"
+                        placeholder="Card holder"
+                        class="form__input"
+                      />
+                      <img
+                        src="./assets/icons/warning.svg"
+                        alt=""
+                        class="form__input-icon-error"
+                      />
+                    </div>
+                    <p class="form__error">Card holder is required</p>
+                  </div>
+
+                  <!-- Card details input -->
+                  <div class="form__group">
+                    <label
+                      for="card-details"
+                      class="form__label form__label--medium"
+                    >
+                      Card Details
+                    </label>
+                    <div class="form__text-input">
+                      <input
+                        required
+                        type="text"
+                        name="card-details"
+                        id="card-details"
+                        placeholder="Card details"
+                        class="form__input"
+                      />
+                      <img
+                        src="./assets/icons/warning.svg"
+                        alt=""
+                        class="form__input-icon-error"
+                      />
+                    </div>
+                    <p class="form__error">Card details is required</p>
+                  </div>
+
+                  <div class="form__row cart-info__form-row">
+                    <!-- Date expired input -->
+                    <div class="form__group">
+                      <div class="form__text-input">
+                        <input
+                          required
+                          type="text"
+                          name="date-expired"
+                          id="date-expired"
+                          placeholder="MM/YY"
+                          class="form__input"
+                        />
+                        <img
+                          src="./assets/icons/warning.svg"
+                          alt=""
+                          class="form__input-icon-error"
+                        />
+                      </div>
+                      <p class="form__error">Date expired is required</p>
+                    </div>
+
+                    <!-- CVC input -->
+                    <div class="form__group">
+                      <div class="form__text-input">
+                        <input
+                          required
+                          type="text"
+                          name="cvc"
+                          id="cvc"
+                          placeholder="CVC"
+                          class="form__input"
+                        />
+                        <img
+                          src="./assets/icons/warning.svg"
+                          alt=""
+                          class="form__input-icon-error"
+                        />
+                      </div>
+                      <p class="form__error">CVC is required</p>
+                    </div>
+                  </div>
+                </form>
+
+                <div class="cart-info__row">
+                  <span class="cart-info__label">
+                    Subtotal
+                    <span class="cart-info__sub-label">(items)</span>
+                  </span>
+                  <span class="cart-info__value">3</span>
+                </div>
+                <div class="cart-info__row">
+                  <span class="cart-info__label">
+                    Price
+                    <span class="cart-info__sub-label">(Total)</span>
+                  </span>
+                  <span class="cart-info__value">$191.65</span>
+                </div>
+                <div class="cart-info__row">
+                  <span class="cart-info__label">Shipping</span>
+                  <span class="cart-info__value">$10.00</span>
+                </div>
+                <div class="cart-info__separate"></div>
+                <div class="cart-info__row">
+                  <span class="cart-info__label">Estimated Total</span>
+                  <span class="cart-info__value">$201.65</span>
+                </div>
+                <a
+                  href="./payment.html"
+                  class="btn btn--primary btn--rounded cart-info__checkout-btn"
+                >
+                  Pay $465.98
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer section -->
+    <footer id="footer" class="footer"></footer>
+    <script>
+      load("#footer", "./templates/footer.html");
+    </script>
+  </body>
+</html>

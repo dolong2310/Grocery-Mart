@@ -1,0 +1,200 @@
+@use "../abstracts";
+
+.auth {
+  display: flex;
+  min-height: 100vh;
+
+  // -webkit-touch-callout use on safari
+  // -webkit-fill-available min-height make scroll appears on mobile of safari (ios)
+  @supports (-webkit-touch-callout: none) {
+    min-height: -webkit-fill-available;
+  }
+
+  &__intro,
+  &__content {
+    flex: 1;
+    padding: 0 30px;
+  }
+
+  &__intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--auth-intro-bg-color);
+
+    &-next,
+    &-logo {
+      position: absolute;
+      left: 50%;
+      translate: -50%;
+    }
+
+    &-logo {
+      top: 80px;
+    }
+
+    &-next {
+      bottom: 50px;
+    }
+
+    &-img {
+      width: min(424px, 100%);
+    }
+
+    &-text {
+      max-width: 412px;
+      margin-top: 50px;
+      color: var(--auth-intro-text-color);
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 500;
+      line-height: 144.444%;
+
+      @include abstracts.screen(md) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--auth-content-bg-color);
+
+    @include abstracts.screen(md) {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      transition: translate 0.25s ease-out;
+      overflow-y: auto;
+
+      &.hide {
+        translate: 100%;
+      }
+
+      &.show {
+        translate: 0;
+      }
+    }
+
+    &-inner {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+
+      width: min(460px, 100%);
+      margin: 0 auto;
+
+      @include abstracts.screen(md) {
+        width: min(400px, 100%);
+      }
+    }
+
+    &-heading {
+      margin-top: 50px;
+      font-size: 3rem;
+      font-weight: 500;
+      line-height: 146.667%;
+
+      @include abstracts.screen(md) {
+        font-size: 2.2rem;
+        line-height: 145.455%;
+      }
+
+      @include abstracts.screen(sm) {
+        margin-top: 30px;
+      }
+    }
+
+    &-desc {
+      margin-top: 10px;
+      padding: 0 30px;
+      color: #9e9da8;
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 146.667%;
+
+      @include abstracts.screen(md) {
+        font-size: 1.4rem;
+        line-height: 142.857%;
+      }
+    }
+  }
+
+  &__form {
+    margin-top: 30px;
+    width: 100%;
+
+    @include abstracts.screen(md) {
+      margin-top: 10px;
+    }
+
+    &-forgot {
+      margin-top: 10px;
+    }
+  }
+
+  &__btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 50px;
+
+    @include abstracts.screen(sm) {
+      margin-top: 30px;
+    }
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 108px;
+    color: #9e9da8;
+    font-size: 1.8rem;
+    line-height: 144.444%;
+
+    @include abstracts.screen(md) {
+      margin-top: 56px;
+      font-size: 1.6rem;
+      line-height: 150%;
+    }
+
+    @include abstracts.screen(sm) {
+      margin-top: 40px;
+    }
+  }
+
+  &__text-link,
+  &__link {
+    color: #0071dc;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 144.444%;
+  }
+
+  &__link {
+    @include abstracts.screen(md) {
+      font-size: 1.4rem;
+      line-height: 142.857%;
+    }
+  }
+
+  &__text-link {
+    @include abstracts.screen(md) {
+      font-size: 1.6rem;
+      line-height: 150%;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+  }
+
+  &__message {
+    margin-top: 30px;
+  }
+}

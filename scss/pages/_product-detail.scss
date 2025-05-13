@@ -1,0 +1,309 @@
+@use "../abstracts";
+
+.product-page {
+  display: flex;
+  flex-direction: column;
+  background: var(--product-detail-bg-color);
+  padding-bottom: 50px;
+}
+
+.product-container {
+  margin-top: 30px;
+
+  @include abstracts.screen(md) {
+    margin-top: 20px;
+  }
+}
+
+.product-info-container {
+  background: var(--product-bg-color);
+
+  @include abstracts.screen(md) {
+    border-radius: 20px;
+    box-shadow: 0px 20px 60px 10px var(--product-shadow);
+  }
+}
+
+.product-preview {
+  padding: 0 30px;
+
+  @include abstracts.screen(lg) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  @include abstracts.screen(md) {
+    padding: 16px;
+  }
+
+  &__list {
+    display: flex;
+    overflow: hidden;
+
+    @include abstracts.screen(lg) {
+      flex-grow: 1;
+    }
+  }
+
+  &__item {
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+    padding-top: 92%;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__thumbs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 30px;
+
+    @include abstracts.screen(lg) {
+      flex-direction: column;
+      padding-left: 0;
+    }
+
+    @include abstracts.screen(md) {
+      display: none;
+    }
+  }
+
+  &__thumb-img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    border: 1.5px solid rgb(158, 157, 168, 0.3);
+    border-radius: 8px;
+    opacity: 0.9;
+    transition: opacity 0.3s ease-out, border-color 0.3s ease-out;
+
+    &:not(&--current):hover {
+      opacity: 1;
+      border-color: #9e9da8;
+      cursor: pointer;
+    }
+
+    &--current {
+      opacity: 1;
+      border-color: #ffb700;
+    }
+  }
+}
+
+.product-info {
+  padding: 60px;
+  background: var(--product-info-bg-color);
+  border-radius: 10px;
+
+  @include abstracts.screen(xxl) {
+    padding: 30px;
+  }
+
+  @include abstracts.screen(lg) {
+    margin-top: 30px;
+  }
+
+  @include abstracts.screen(md) {
+    margin-top: 0;
+    padding: 0 16px 16px;
+    border-radius: 20px;
+  }
+
+  &__heading {
+    font-size: 2.6rem;
+    font-weight: 500;
+    line-height: 138.462%;
+
+    @include abstracts.screen(sm) {
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 144.444%;
+    }
+  }
+
+  &__select {
+    margin-top: 30px;
+  }
+
+  &__tag {
+    background: var(--product-info-tag-bg-color);
+  }
+
+  &__card {
+    margin: 30px 0 0 30px;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #b9babe;
+
+    @include abstracts.screen(xxl) {
+      margin-left: 20px;
+    }
+
+    @include abstracts.screen(xl) {
+      margin-left: 0;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+  }
+
+  &__price {
+    // color: #000;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 150%;
+  }
+
+  &__tax {
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: rgb(103, 176, 68, 0.2);
+    margin-left: 10px;
+    color: #67b044;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 142.857%;
+  }
+
+  &__total-price {
+    margin: 20px 0;
+    // color: #000;
+    font-size: 2.6rem;
+    font-weight: 500;
+    line-height: 138.462%;
+  }
+
+  &__btn {
+    flex: 1;
+  }
+
+  &__fav-btn {
+    width: 46px;
+    height: 46px;
+    margin-left: 20px;
+    border-radius: 6px;
+    border: 1px solid #d2d1d6;
+    background: transparent;
+  }
+}
+
+.product-props {
+  padding-left: 30px;
+
+  @include abstracts.screen(xxl) {
+    padding-left: 20px;
+  }
+
+  @include abstracts.screen(xl) {
+    padding-left: 0;
+  }
+}
+
+.product-prop {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-top: 30px;
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 144.444%;
+  }
+
+  &__desc {
+    margin-top: 4px;
+    font-size: 1.4rem;
+    line-height: 142.857%;
+  }
+}
+
+.product-tab {
+  --gap: 30px;
+
+  @include abstracts.screen(md) {
+    --gap: 20px;
+  }
+
+  @include abstracts.screen(md) {
+    --gap: 10px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    margin: 0 calc(-1 * var(--gap));
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    padding: 0 var(--gap);
+    color: #9e9da8;
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 145.455%;
+    user-select: none;
+    white-space: nowrap;
+
+    @include abstracts.screen(md) {
+      padding-top: 8px;
+      padding-bottom: 8px;
+      font-size: 1.8rem;
+    }
+
+    @include abstracts.screen(sm) {
+      font-size: 1.4rem;
+      line-height: 142.857%;
+    }
+
+    &:not(&--active):hover {
+      cursor: pointer;
+    }
+
+    &--active {
+      color: inherit; //#1a162e;
+    }
+  }
+
+  &__contents {
+    padding-top: 30px;
+  }
+
+  &__content {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  &__text-content {
+    margin-top: -20px;
+  }
+}
+
+.product-content {
+  width: 100%;
+
+  &__heading {
+    margin-bottom: 30px;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 141.667%;
+  }
+}
+
+@include abstracts.screen(md) {
+}

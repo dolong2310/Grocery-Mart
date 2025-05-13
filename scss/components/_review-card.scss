@@ -1,0 +1,104 @@
+@use "../abstracts";
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 30px;
+  border-radius: 16px;
+  background: var(--review-card-bg-color);
+
+  @include abstracts.screen(sm) {
+    padding: 20px;
+  }
+
+  &__content {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+
+    @include abstracts.screen(xl) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    @include abstracts.screen(md) {
+      flex-direction: row;
+      align-items: initial;
+      text-align: initial;
+    }
+  }
+
+  &__avatar {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  &__title {
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 145.455%;
+
+    @include abstracts.screen(sm) {
+      font-size: 1.8rem;
+      line-height: 144.444%;
+    }
+  }
+
+  &__desc {
+    margin-top: 10px;
+    font-size: 1.6rem;
+    line-height: 150%;
+
+    @include abstracts.screen(sm) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+
+    @include abstracts.screen(lg) {
+      flex-direction: column;
+    }
+
+    @include abstracts.screen(md) {
+      flex-direction: row;
+    }
+  }
+
+  &__stars {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    img {
+      width: 18px;
+      height: 18px;
+      // padding: 3px;
+    }
+  }
+
+  &__text {
+    flex-shrink: 0;
+    margin-left: 20px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 144.444%;
+
+    @include abstracts.screen(lg) {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+
+    @include abstracts.screen(md) {
+      margin-left: 20px;
+      margin-top: 0;
+    }
+  }
+}

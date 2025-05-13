@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal infomation | Grocery Mart</title>
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+
+    <!-- JS -->
+    <script src="./assets/js/scripts.js"></script>
+  </head>
+  <body>
+    <!-- Header section -->
+    <header id="header" class="header"></header>
+    <script>
+      load("#header", "./templates/header-logined.html");
+    </script>
+
+    <!-- Main section -->
+    <main class="profile-page">
+      <div class="container">
+        <!-- Search Bar -->
+        <div class="profile-container d-none d-md-block">
+          <div class="search-bar">
+            <input
+              type="text"
+              name=""
+              id=""
+              class="search-bar__input"
+              placeholder="Search for item"
+            />
+            <button class="search-bar__btn">
+              <img
+                src="./assets/icons/search.svg"
+                alt=""
+                class="icon search-bar__icon"
+              />
+            </button>
+          </div>
+        </div>
+
+        <!-- Profile container -->
+        <div class="profile-container">
+          <div class="row gy-md-3" style="--grid-gutter-y: 20px">
+            <!-- Side bar -->
+            <div class="col-3 col-xl-4 col-lg-5 col-md-12">
+              <aside class="profile__sidebar">
+                <div class="profile-user">
+                  <img
+                    src="./assets/img/avatars/avatar.jpg"
+                    alt=""
+                    class="profile-user__avatar"
+                  />
+                  <h1 class="profile-user__name">Imran Khan</h1>
+                  <p class="profile-user__desc">Registered: 18th May 2025</p>
+                </div>
+
+                <!-- Profile menu 1 -->
+                <div class="profile-menu">
+                  <h3 class="profile-menu__title">Manage Account</h3>
+                  <ul class="profile-menu__list">
+                    <li class="profile-menu__item">
+                      <a href="./personal-info.html" class="profile-menu__link">
+                        <span class="profile-menu__icon">
+                          <img
+                            src="./assets/icons/profile.svg"
+                            alt=""
+                            class="icon"
+                          />
+                        </span>
+                        Personal info
+                      </a>
+                    </li>
+
+                    <li class="profile-menu__item">
+                      <a href="#!" class="profile-menu__link">
+                        <span class="profile-menu__icon">
+                          <img
+                            src="./assets/icons/location.svg"
+                            alt=""
+                            class="icon"
+                          />
+                        </span>
+                        Addresses
+                      </a>
+                    </li>
+
+                    <li class="profile-menu__item">
+                      <a href="#!" class="profile-menu__link">
+                        <span class="profile-menu__icon">
+                          <img
+                            src="./assets/icons/message.svg"
+                            alt=""
+                            class="icon"
+                          />
+                        </span>
+                        Communications & privacy
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Profile menu 2 -->
+                <div class="profile-menu">
+                  <h3 class="profile-menu__title">My items</h3>
+                  <ul class="profile-menu__list">
+                    <li class="profile-menu__item">
+                      <a href="#!" class="profile-menu__link">
+                        <span class="profile-menu__icon">
+                          <img
+                            src="./assets/icons/download.svg"
+                            alt=""
+                            class="icon"
+                          />
+                        </span>
+                        Reorder
+                      </a>
+                    </li>
+
+                    <li class="profile-menu__item">
+                      <a href="#!" class="profile-menu__link">
+                        <span class="profile-menu__icon">
+                          <img
+                            src="./assets/icons/heart.svg"
+                            alt=""
+                            class="icon"
+                          />
+                        </span>
+                        Lists
+                      </a>
+                    </li>
+
+                    <li class="profile-menu__item">
+                      <a href="#!" class="profile-menu__link">
+                        <span class="profile-menu__icon">
+                          <img
+                            src="./assets/icons/gift.svg"
+                            alt=""
+                            class="icon"
+                          />
+                        </span>
+                        Registries
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Profile menu 3 -->
+                <div class="profile-menu">
+                  <h3 class="profile-menu__title">Subscriptions & plans</h3>
+                  <ul class="profile-menu__list">
+                    <li class="profile-menu__item">
+                      <a href="#!" class="profile-menu__link">
+                        <span class="profile-menu__icon">
+                          <img
+                            src="./assets/icons/protection.svg"
+                            alt=""
+                            class="icon"
+                          />
+                        </span>
+                        Protection plans
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Profile menu 4 -->
+                <div class="profile-menu">
+                  <h3 class="profile-menu__title">Customer Service</h3>
+                  <ul class="profile-menu__list">
+                    <li class="profile-menu__item">
+                      <a href="#!" class="profile-menu__link">
+                        <span class="profile-menu__icon">
+                          <img
+                            src="./assets/icons/info.svg"
+                            alt=""
+                            class="icon"
+                          />
+                        </span>
+                        Help
+                      </a>
+                    </li>
+
+                    <li class="profile-menu__item">
+                      <a href="#!" class="profile-menu__link">
+                        <span class="profile-menu__icon">
+                          <img
+                            src="./assets/icons/danger-circle.svg"
+                            alt=""
+                            class="icon"
+                          />
+                        </span>
+                        Terms of Use
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </aside>
+            </div>
+            <!-- Profile content -->
+            <div class="col-9 col-xl-8 col-lg-7 col-md-12">
+              <div class="cart-info">
+                <div class="row gy-3">
+                  <!-- Form input card -->
+                  <div class="col-12">
+                    <div class="d-flex">
+                      <a href="./profile.html" class="profile__back-btn">
+                        <img src="./assets/icons/arrow-back.svg" alt="" />
+                      </a>
+                      <h1 class="cart-info__heading cart-info__heading--lv2">
+                        Personal info
+                      </h1>
+                    </div>
+
+                    <form action="./profile.html" class="form">
+                      <!-- Row 1 -->
+                      <div class="form__row profile__row">
+                        <!-- Full name input -->
+                        <div class="form__group">
+                          <label
+                            for="full-name"
+                            class="form__label form__label--medium"
+                          >
+                            Full Name
+                          </label>
+                          <div class="form__text-input">
+                            <input
+                              required
+                              autofocus
+                              type="text"
+                              name="full-name"
+                              id="full-name"
+                              placeholder="Imran Khan"
+                              class="form__input"
+                            />
+                            <img
+                              src="./assets/icons/warning.svg"
+                              alt=""
+                              class="form__input-icon-error"
+                            />
+                          </div>
+                          <p class="form__error">Full name is required</p>
+                        </div>
+
+                        <!-- Email input -->
+                        <div class="form__group">
+                          <label
+                            for="email"
+                            class="form__label form__label--medium"
+                          >
+                            Email
+                          </label>
+                          <div class="form__text-input">
+                            <input
+                              required
+                              type="email"
+                              name="email"
+                              id="email"
+                              placeholder="imrankhan123@gmail.com"
+                              class="form__input"
+                            />
+                            <img
+                              src="./assets/icons/warning.svg"
+                              alt=""
+                              class="form__input-icon-error"
+                            />
+                          </div>
+                          <p class="form__error">Email is required</p>
+                        </div>
+                      </div>
+
+                      <!-- Row 2 -->
+                      <div class="form__row profile__row">
+                        <!-- Phone number input -->
+                        <div class="form__group">
+                          <label
+                            for="phone-number"
+                            class="form__label form__label--medium"
+                          >
+                            Phone Number
+                          </label>
+                          <div class="form__text-input">
+                            <input
+                              required
+                              type="text"
+                              name="phone-number"
+                              id="phone-number"
+                              placeholder="+00123456789"
+                              class="form__input"
+                            />
+                            <img
+                              src="./assets/icons/warning.svg"
+                              alt=""
+                              class="form__input-icon-error"
+                            />
+                          </div>
+                          <p class="form__error">Phone number is required</p>
+                        </div>
+
+                        <!-- Password input -->
+                        <div class="form__group">
+                          <label
+                            for="password"
+                            class="form__label form__label--medium"
+                          >
+                            Passwrod
+                          </label>
+                          <div class="form__text-input">
+                            <input
+                              required
+                              type="password"
+                              name="password"
+                              id="password"
+                              value="123456789"
+                              class="form__input"
+                            />
+                            <img
+                              src="./assets/icons/warning.svg"
+                              alt=""
+                              class="form__input-icon-error"
+                            />
+                          </div>
+                          <p class="form__error">Passwrod is required</p>
+                        </div>
+                      </div>
+
+                      <!-- Action button -->
+                      <div class="form__group profile__btn-group">
+                        <button class="btn btn--text profile__btn">
+                          Cancel
+                        </button>
+                        <button
+                          type="submit"
+                          class="btn btn--primary btn--rounded profile__btn form__submit-btn"
+                        >
+                          Save Edit
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer section -->
+    <footer id="footer" class="footer"></footer>
+    <script>
+      load("#footer", "./templates/footer.html");
+    </script>
+  </body>
+</html>

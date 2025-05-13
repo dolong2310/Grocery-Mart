@@ -1,0 +1,150 @@
+@use "../abstracts";
+
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+
+.profile {
+  // ================================ Profile Container ==================================
+  &-container {
+    margin-top: 30px;
+
+    @include abstracts.screen(md) {
+      margin-top: 20px;
+    }
+  }
+
+  // ================================ Profile Sidebar ==================================
+  &__sidebar {
+    border-radius: 20px;
+    background: var(--profile-sidebar-bg-color);
+    box-shadow: 0px 20px 60px 10px var(--profile-sidebar-shadow);
+    overflow: hidden;
+  }
+
+  // ================================ Profile User ==================================
+  &-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 35px 0 20px;
+    background: linear-gradient(180deg, rgba(26, 22, 46, 0) 0%, #1a162e 100%),
+      url("../img/profile/cover.png") no-repeat center / cover;
+
+    border-radius: 20px 20px 0px 0px;
+    box-shadow: 0px 20px 60px 10px var(--profile-user-shadow);
+
+    &__avatar {
+      width: 121px;
+      height: 121px;
+      object-fit: cover;
+      border-radius: 50%;
+
+      background-color: #eee;
+      background-clip: content-box;
+      border: 5px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0px 4px 14px 2px rgba(0, 0, 0, 0.08);
+    }
+
+    &__name {
+      margin-top: 15px;
+      color: #fff;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 144.444%;
+    }
+
+    &__desc {
+      margin-top: 2px;
+      color: #fafafd;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 146.667%;
+    }
+  }
+
+  // ================================ Profile Menu ==================================
+  &-menu {
+    margin: 30px 0;
+    padding: 0 30px;
+
+    &__title {
+      margin-bottom: 10px;
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 144.444%;
+    }
+
+    &__list {
+    }
+
+    &__item {
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 0;
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 146.667%;
+      transition: color 0.25s ease-out;
+
+      &:hover {
+        color: #0071dc;
+        filter: brightness(0) saturate(100%) invert(26%) sepia(53%)
+          saturate(7375%) hue-rotate(199deg) brightness(100%) contrast(100%);
+      }
+    }
+
+    &__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 100%;
+    }
+  }
+
+  // ================================ Others ==================================
+  &__row {
+    // display: flex;
+    // align-items: center;
+
+    @include abstracts.screen(lg) {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+
+  &__back-btn {
+    margin-left: -10px;
+    padding: 0 10px;
+  }
+
+  &__desc {
+    margin-bottom: 16px;
+  }
+
+  &__btn-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @include abstracts.screen(lg) {
+      margin-top: 30px;
+    }
+  }
+
+  &__btn {
+    @include abstracts.screen(md) {
+      flex: 1;
+    }
+  }
+}
